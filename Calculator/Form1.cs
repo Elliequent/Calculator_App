@@ -15,7 +15,107 @@ namespace Calculator
         public Form1()
         {
             InitializeComponent();
-        }
+
+            btn0.MouseEnter += OnMouseEnterButton1;
+            btn0.MouseLeave += OnMouseLeaveButton1;
+            btn1.MouseEnter += OnMouseEnterButton1;
+            btn1.MouseLeave += OnMouseLeaveButton1;
+            btn2.MouseEnter += OnMouseEnterButton1;
+            btn2.MouseLeave += OnMouseLeaveButton1;
+            btn3.MouseEnter += OnMouseEnterButton1;
+            btn3.MouseLeave += OnMouseLeaveButton1;
+            btn4.MouseEnter += OnMouseEnterButton1;
+            btn4.MouseLeave += OnMouseLeaveButton1;
+            btn5.MouseEnter += OnMouseEnterButton1;
+            btn5.MouseLeave += OnMouseLeaveButton1;
+            btn6.MouseEnter += OnMouseEnterButton1;
+            btn6.MouseLeave += OnMouseLeaveButton1;
+            btn7.MouseEnter += OnMouseEnterButton1;
+            btn7.MouseLeave += OnMouseLeaveButton1;
+            btn8.MouseEnter += OnMouseEnterButton1;
+            btn8.MouseLeave += OnMouseLeaveButton1;
+            btn9.MouseEnter += OnMouseEnterButton1;
+            btn9.MouseLeave += OnMouseLeaveButton1;
+            btnAdd.MouseEnter += OnMouseEnterButton1;
+            btnAdd.MouseLeave += OnMouseLeaveButton1;
+            btnCE.MouseEnter += OnMouseEnterButton1;
+            btnCE.MouseLeave += OnMouseLeaveButton1;
+            btnClear.MouseEnter += OnMouseEnterButton1;
+            btnClear.MouseLeave += OnMouseLeaveButton1;
+            btnDEL.MouseEnter += OnMouseEnterButton1;
+            btnDEL.MouseLeave += OnMouseLeaveButton1;
+            btnDivide.MouseEnter += OnMouseEnterButton1;
+            btnDivide.MouseLeave += OnMouseLeaveButton1;
+            btnEquals.MouseEnter += OnMouseEnterButton1;
+            btnEquals.MouseLeave += OnMouseLeaveButton1;
+            btnMemClear.MouseEnter += OnMouseEnterButton1;
+            btnMemClear.MouseLeave += OnMouseLeaveButton1;
+            btnMemNeg.MouseEnter += OnMouseEnterButton1;
+            btnMemNeg.MouseLeave += OnMouseLeaveButton1;
+            btnMemPos.MouseEnter += OnMouseEnterButton1;
+            btnMemPos.MouseLeave += OnMouseLeaveButton1;
+            btnMultiply.MouseEnter += OnMouseEnterButton1;
+            btnMultiply.MouseLeave += OnMouseLeaveButton1;
+            btnPeriod.MouseEnter += OnMouseEnterButton1;
+            btnPeriod.MouseLeave += OnMouseLeaveButton1;
+            btnPlusMinus.MouseEnter += OnMouseEnterButton1;
+            btnPlusMinus.MouseLeave += OnMouseLeaveButton1;
+            btnSubtract.MouseEnter += OnMouseEnterButton1;
+            btnSubtract.MouseLeave += OnMouseLeaveButton1;
+        }   // End of Method
+
+        private void OnMouseEnterButton1(object sender, EventArgs e)
+        {
+            btn0.BackColor = Color.Black;
+            btn1.BackColor = Color.Black;
+            btn2.BackColor = Color.Black;
+            btn3.BackColor = Color.Black;
+            btn4.BackColor = Color.Black;
+            btn5.BackColor = Color.Black;
+            btn6.BackColor = Color.Black;
+            btn7.BackColor = Color.Black;
+            btn8.BackColor = Color.Black;
+            btn9.BackColor = Color.Black;
+            btnAdd.BackColor = Color.Black;
+            btnCE.BackColor = Color.Black;
+            btnClear.BackColor = Color.Black;
+            btnDEL.BackColor = Color.Black;
+            btnDivide.BackColor = Color.Black;
+            btnEquals.BackColor = Color.Black;
+            btnMemClear.BackColor = Color.Black;
+            btnMemNeg.BackColor = Color.Black;
+            btnMemPos.BackColor = Color.Black;
+            btnMultiply.BackColor = Color.Black;
+            btnPeriod.BackColor = Color.Black;
+            btnPlusMinus.BackColor = Color.Black;
+            btnSubtract.BackColor = Color.Black;
+        }   // End of Method
+        private void OnMouseLeaveButton1(object sender, EventArgs e)
+        {
+            btn0.BackColor = Color.Black;
+            btn1.BackColor = Color.Black;
+            btn2.BackColor = Color.Black;
+            btn3.BackColor = Color.Black;
+            btn4.BackColor = Color.Black;
+            btn5.BackColor = Color.Black;
+            btn6.BackColor = Color.Black;
+            btn7.BackColor = Color.Black;
+            btn8.BackColor = Color.Black;
+            btn9.BackColor = Color.Black;
+            btnAdd.BackColor = Color.Black;
+            btnCE.BackColor = Color.Black;
+            btnClear.BackColor = Color.Black;
+            btnDEL.BackColor = Color.Black;
+            btnDivide.BackColor = Color.Black;
+            btnEquals.BackColor = Color.Black;
+            btnMemClear.BackColor = Color.Black;
+            btnMemNeg.BackColor = Color.Black;
+            btnMemPos.BackColor = Color.Black;
+            btnMultiply.BackColor = Color.Black;
+            btnPeriod.BackColor = Color.Black;
+            btnPlusMinus.BackColor = Color.Black;
+            btnSubtract.BackColor = Color.Black;
+        }   // End of Method
 
         public static string prevEquation = "", prevOperation = "", operation = "";
 
@@ -39,7 +139,7 @@ namespace Calculator
                     break;
                 case "btnCE":
                     operation = "";
-                    txtDisplay.ResetText();
+                    txtDisplay2.ResetText();
                     break;
                 case "btnPeriod":
                     if (!txtDisplay.Text.Contains("."))
@@ -71,6 +171,46 @@ namespace Calculator
                     break;
             }
         }   // End of Method
+
+
+        int[] array = new int[1];
+        int elementNo = 0;
+
+        private void Memory_Function(object sender, EventArgs e)
+        {
+            Button mem = sender as Button;
+
+            switch (mem.Text)
+            {
+                case "M+":
+                    if (elementNo <= array.Length - 1)
+                    {
+                        int number = int.Parse(txtDisplay.Text);
+                        array[elementNo] = number;
+                        elementNo++;
+
+                        lblOutput.Text = "";
+
+                        for (int i = 0; i <= array.Length - 1; i++)
+                        {
+                            lblOutput.Text = lblOutput.Text + array[i] + " " + "\n";
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Memory Full");
+                    }
+                    break;
+                case "M-":
+                    lblOutput.Text = "";
+                    Array.Clear(array, 0, 1);
+                    elementNo = 0;
+                    break;
+                case "MC":
+                    txtDisplay.Text = lblOutput.Text;
+                    break;
+            }
+        }
 
         private void Operation_Click (object sender, EventArgs e)
         {
@@ -126,10 +266,10 @@ namespace Calculator
                         multi_equations();
                     }
                     break;
-                case "X":
+                case "x":
                     if (operation == "" || operation == "=")
                     {
-                        operation = "X";
+                        operation = "x";
                         prevOperation = operation;
                         prevEquation = txtDisplay.Text;
                         txtDisplay2.Text = prevEquation + operation;
@@ -137,7 +277,7 @@ namespace Calculator
                     }
                     else
                     {
-                        operation = "X";
+                        operation = "x";
                         multi_equations();
                     }
                     break;
@@ -185,7 +325,7 @@ namespace Calculator
                 txtDisplay2.Text = prevEquation + operation;
                 txtDisplay.ResetText();
             }
-            else if (prevOperation == "X")
+            else if (prevOperation == "x")
             {
                 prevOperation = operation;
 
