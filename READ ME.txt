@@ -1,0 +1,7 @@
+Developing my skills with a calculator program I learned from a Youtube tutorial.
+
+I plan to build on it from there and develop a programmers calcualtor and additions like a graphic display.
+
+Written in C# on Visual Studio.
+
+If you come across this, say Hi! I'd love to hear from new comers or experienced programmers.
