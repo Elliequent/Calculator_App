@@ -7,17 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace Calculator
 {
-    public partial class Form1 : Form
+    public partial class Programmers_Calculator : Form
     {
-        public Form1()
+        public Programmers_Calculator()
         {
             InitializeComponent();
-
-            // Mouse hover over and leave button space cause a white over layer that did not fit the
-            // design of app so every button is called to display no colour when hovering over.
 
             btn0.MouseEnter += OnMouseEnterButton1;
             btn0.MouseLeave += OnMouseLeaveButton1;
@@ -51,12 +50,6 @@ namespace Calculator
             btnDivide.MouseLeave += OnMouseLeaveButton1;
             btnEquals.MouseEnter += OnMouseEnterButton1;
             btnEquals.MouseLeave += OnMouseLeaveButton1;
-            btnMemClear.MouseEnter += OnMouseEnterButton1;
-            btnMemClear.MouseLeave += OnMouseLeaveButton1;
-            btnMemNeg.MouseEnter += OnMouseEnterButton1;
-            btnMemNeg.MouseLeave += OnMouseLeaveButton1;
-            btnMemPos.MouseEnter += OnMouseEnterButton1;
-            btnMemPos.MouseLeave += OnMouseLeaveButton1;
             btnMultiply.MouseEnter += OnMouseEnterButton1;
             btnMultiply.MouseLeave += OnMouseLeaveButton1;
             btnPeriod.MouseEnter += OnMouseEnterButton1;
@@ -65,7 +58,13 @@ namespace Calculator
             btnPlusMinus.MouseLeave += OnMouseLeaveButton1;
             btnSubtract.MouseEnter += OnMouseEnterButton1;
             btnSubtract.MouseLeave += OnMouseLeaveButton1;
-        }   // End of Method
+            btnConBin.MouseEnter += OnMouseEnterButton1;
+            btnConBin.MouseLeave += OnMouseLeaveButton1;
+            btnConDec.MouseEnter += OnMouseEnterButton1;
+            btnConDec.MouseLeave += OnMouseLeaveButton1;
+            btnConDex.MouseEnter += OnMouseEnterButton1;
+            btnConDex.MouseLeave += OnMouseLeaveButton1;
+        }
 
         private void OnMouseEnterButton1(object sender, EventArgs e)    // Mouse over any buttons
         {
@@ -85,14 +84,18 @@ namespace Calculator
             btnDEL.BackColor = Color.Black;
             btnDivide.BackColor = Color.Black;
             btnEquals.BackColor = Color.Black;
-            btnMemClear.BackColor = Color.Black;
-            btnMemNeg.BackColor = Color.Black;
-            btnMemPos.BackColor = Color.Black;
             btnMultiply.BackColor = Color.Black;
             btnPeriod.BackColor = Color.Black;
             btnPlusMinus.BackColor = Color.Black;
             btnSubtract.BackColor = Color.Black;
+            btnConBin.BackColor = Color.Black;
+            btnConDec.BackColor = Color.Black;
+            btnConDex.BackColor = Color.Black;
+            btnConBin.BackColor = Color.Black;
+            btnConDec.BackColor = Color.Black;
+            btnConDex.BackColor = Color.Black;
         }   // End of Method
+
         private void OnMouseLeaveButton1(object sender, EventArgs e)    // Mouse leaving button space
         {
             btn0.BackColor = Color.Black;
@@ -111,9 +114,6 @@ namespace Calculator
             btnDEL.BackColor = Color.Black;
             btnDivide.BackColor = Color.Black;
             btnEquals.BackColor = Color.Black;
-            btnMemClear.BackColor = Color.Black;
-            btnMemNeg.BackColor = Color.Black;
-            btnMemPos.BackColor = Color.Black;
             btnMultiply.BackColor = Color.Black;
             btnPeriod.BackColor = Color.Black;
             btnPlusMinus.BackColor = Color.Black;
@@ -175,66 +175,113 @@ namespace Calculator
             }
         }   // End of Method
 
-        // Array for Memory, array used to increase storage at a later date
-        int[] array = new int[1];
-        int elementNo = 0;
-
-        private void Memory_Function(object sender, EventArgs e)    // Memory (M+, M- and MC) buttons
+        public bool hex_void_test(string txtDisplay)    // Confirm txtDisplay is a hexidecimal entry
         {
-            Button mem = sender as Button;
+            return Regex.IsMatch(txtDisplay, @"\A\b[0-9a-fA-F]+\b\Z");
+        }
 
-            switch (mem.Text)
+        public bool Bin_void_test(string txtDisplay)
+        {
+                bool vaild = Regex.IsMatch(txtDisplay.ToString(), "^[01]+$");
+                return vaild;
+        }
+
+        private void btnConDex_Click(object sender, EventArgs e)    // Decimal or binary to Hex
+        {
+            try
             {
-                case "M+":
-                    if (elementNo <= array.Length - 1)
-                    {
-                        int number = int.Parse(txtDisplay.Text);
-                        array[elementNo] = number;
-                        elementNo++;
+                string input = txtDisplay.Text;
 
-                        lblOutput.Text = "";
-
-                        for (int i = 0; i <= array.Length - 1; i++)
-                        {
-                            lblOutput.Text = lblOutput.Text + array[i] + " " + "\n";
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Memory Full"); // Error message when array is full
-                    }
-                    break;
-                case "M-":
-                    lblOutput.Text = "";
-                    Array.Clear(array, 0, 1);
-                    elementNo = 0;
-                    break;
-                case "MC":
-                    txtDisplay.Text = lblOutput.Text;
-                    break;
+                if (Bin_void_test(txtDisplay.Text) == true)
+                {
+                    string hex = txtDisplay.Text;
+                    string hexvalue = Convert.ToInt32(hex.ToString(), 2).ToString("X");
+                    txtDisplay.Text = hexvalue;
+                }
+                else if (hex_void_test(txtDisplay.Text) == true)
+                {
+                    int num = int.Parse(input);
+                    string hexvalue = num.ToString("X");
+                    txtDisplay.Text = hexvalue;
+                }
+                
             }
-        }   // End of Method
+            catch (FormatException)
+            {
+                txtDisplay.Text = "Error";
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("An Error has Occured - Error Report: \n " + error);
+            }
+           
+        }
 
-        private void infoToolStripMenuItem_Click(object sender, EventArgs e)    // About Info
+        private void btnConBin_Click(object sender, EventArgs e)    // Decimal or hex to Binary
         {
-            MessageBox.Show("Programs written in C# in Visual Studio. \nSource code written by Ian Fraser");
-        }   // End of Method
+            try
+            {
+                string input = txtDisplay.Text;
+                int num;
 
-        private void graphGeneratorToolStripMenuItem_Click(object sender, EventArgs e)  // Graphic menu
+                if (Bin_void_test(txtDisplay.Text) == true)
+                {
+                    txtDisplay.Text = "Error";
+                }
+                else if (int.TryParse(input, out num))
+                {
+                    string binary = Convert.ToString(num, 2);
+                    txtDisplay.Text = binary.ToString();
+                }
+                else if (hex_void_test(txtDisplay.Text) == true)
+                {
+                    string binary = Convert.ToString(Convert.ToInt64(input, 16), 2);
+                    txtDisplay.Text = binary.ToString();
+                }
+                
+
+            }
+            catch (FormatException)
+            {
+                txtDisplay.Text = "Error";
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("An Error has Occured - Error Report: \n " + error);
+            }
+        }
+
+        private void btnConDec_Click(object sender, EventArgs e)    // Hex or binary to decimal
         {
-            Graph_Generator graphics = new Graph_Generator();
-            graphics.Show();
+            try
+            {
+                string input = txtDisplay.Text;
+                int num;
+
+                if (int.TryParse(input, out num))
+                {
+                    string dec = Convert.ToInt32(num.ToString(), 2).ToString();
+                    txtDisplay.Text = dec.ToString();
+                }
+                else if (hex_void_test(txtDisplay.Text) == true)
+                {
+                    int dec = int.Parse(input.ToString(), NumberStyles.HexNumber);
+                    txtDisplay.Text = dec.ToString();
+                }
+
+            }
+            catch (FormatException)
+            {
+                txtDisplay.Text = "Error";
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("An Error has Occured - Error Report: \n " + error);
+            }
             
-        }   // End of Method
+        }
 
-        private void programmersCalculatorToolStripMenuItem_Click(object sender, EventArgs e)   // Programmers Calculator
-        {
-            Programmers_Calculator programmer = new Programmers_Calculator();
-            programmer.Show();
-            
-        }   // End of Method
-
-        private void Operation_Click (object sender, EventArgs e)   // Operator buttons
+        private void Operation_Click(object sender, EventArgs e)   // Operator buttons
         {
             Button opr = sender as Button;
 
@@ -272,7 +319,7 @@ namespace Calculator
                         operation = "-";
                         multi_equations();
                     }
-                        break;
+                    break;
                 case "/":
                     if (operation == "" || operation == "=")
                     {
@@ -327,7 +374,7 @@ namespace Calculator
                 txtDisplay2.Text = prevEquation + operation;
                 txtDisplay.ResetText();
             }
-            else if(prevOperation == "-")
+            else if (prevOperation == "-")
             {
                 prevOperation = operation;
 

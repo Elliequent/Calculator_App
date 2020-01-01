@@ -10,9 +10,11 @@ C:\Users\iFras\Desktop\C# Practice Examples\Source Code My Examples\Calculator\o
 C:\Users\iFras\Desktop\C# Practice Examples\Personal Projects\Calculator App\Calculator\bin\Debug\Calculator.exe.config
 C:\Users\iFras\Desktop\C# Practice Examples\Personal Projects\Calculator App\Calculator\bin\Debug\Calculator.exe
 C:\Users\iFras\Desktop\C# Practice Examples\Personal Projects\Calculator App\Calculator\bin\Debug\Calculator.pdb
-C:\Users\iFras\Desktop\C# Practice Examples\Personal Projects\Calculator App\Calculator\obj\Debug\Calculator.csprojAssemblyReference.cache
 C:\Users\iFras\Desktop\C# Practice Examples\Personal Projects\Calculator App\Calculator\obj\Debug\Calculator.Form1.resources
 C:\Users\iFras\Desktop\C# Practice Examples\Personal Projects\Calculator App\Calculator\obj\Debug\Calculator.Properties.Resources.resources
 C:\Users\iFras\Desktop\C# Practice Examples\Personal Projects\Calculator App\Calculator\obj\Debug\Calculator.csproj.GenerateResource.cache
 C:\Users\iFras\Desktop\C# Practice Examples\Personal Projects\Calculator App\Calculator\obj\Debug\Calculator.exe
 C:\Users\iFras\Desktop\C# Practice Examples\Personal Projects\Calculator App\Calculator\obj\Debug\Calculator.pdb
+C:\Users\iFras\Desktop\C# Practice Examples\Personal Projects\Calculator App\Calculator\obj\Debug\Calculator.csprojAssemblyReference.cache
+C:\Users\iFras\Desktop\C# Practice Examples\Personal Projects\Calculator App\Calculator\obj\Debug\Calculator.Graph_Generator.resources
+C:\Users\iFras\Desktop\C# Practice Examples\Personal Projects\Calculator App\Calculator\obj\Debug\Calculator.Programmers_Calculator.resources

@@ -52,14 +52,20 @@
             this.txtDisplay = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblMe = new System.Windows.Forms.Label();
             this.lblOutput = new System.Windows.Forms.Label();
             this.btnMemPos = new System.Windows.Forms.Button();
             this.btnMemNeg = new System.Windows.Forms.Button();
             this.btnMemClear = new System.Windows.Forms.Button();
             this.btnDivide = new System.Windows.Forms.Button();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.functionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.graphGeneratorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.programmersCalculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCE
@@ -70,7 +76,7 @@
             this.btnCE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCE.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCE.ForeColor = System.Drawing.Color.Lime;
-            this.btnCE.Location = new System.Drawing.Point(0, 3);
+            this.btnCE.Location = new System.Drawing.Point(36, 31);
             this.btnCE.Name = "btnCE";
             this.btnCE.Size = new System.Drawing.Size(121, 82);
             this.btnCE.TabIndex = 0;
@@ -87,7 +93,7 @@
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.Lime;
-            this.btnClear.Location = new System.Drawing.Point(127, 6);
+            this.btnClear.Location = new System.Drawing.Point(163, 34);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(121, 79);
             this.btnClear.TabIndex = 1;
@@ -103,7 +109,7 @@
             this.btnDEL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDEL.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDEL.ForeColor = System.Drawing.Color.Lime;
-            this.btnDEL.Location = new System.Drawing.Point(254, 6);
+            this.btnDEL.Location = new System.Drawing.Point(290, 34);
             this.btnDEL.Name = "btnDEL";
             this.btnDEL.Size = new System.Drawing.Size(121, 79);
             this.btnDEL.TabIndex = 2;
@@ -119,7 +125,7 @@
             this.btnMultiply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMultiply.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMultiply.ForeColor = System.Drawing.Color.Lime;
-            this.btnMultiply.Location = new System.Drawing.Point(381, 93);
+            this.btnMultiply.Location = new System.Drawing.Point(417, 121);
             this.btnMultiply.Name = "btnMultiply";
             this.btnMultiply.Size = new System.Drawing.Size(121, 89);
             this.btnMultiply.TabIndex = 7;
@@ -135,7 +141,7 @@
             this.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn3.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn3.ForeColor = System.Drawing.Color.Lime;
-            this.btn3.Location = new System.Drawing.Point(254, 93);
+            this.btn3.Location = new System.Drawing.Point(290, 121);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(121, 89);
             this.btn3.TabIndex = 6;
@@ -151,7 +157,7 @@
             this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn2.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn2.ForeColor = System.Drawing.Color.Lime;
-            this.btn2.Location = new System.Drawing.Point(127, 93);
+            this.btn2.Location = new System.Drawing.Point(163, 121);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(121, 89);
             this.btn2.TabIndex = 5;
@@ -167,7 +173,7 @@
             this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn1.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn1.ForeColor = System.Drawing.Color.Lime;
-            this.btn1.Location = new System.Drawing.Point(0, 93);
+            this.btn1.Location = new System.Drawing.Point(36, 121);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(121, 89);
             this.btn1.TabIndex = 4;
@@ -183,7 +189,7 @@
             this.btnSubtract.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubtract.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubtract.ForeColor = System.Drawing.Color.Lime;
-            this.btnSubtract.Location = new System.Drawing.Point(381, 188);
+            this.btnSubtract.Location = new System.Drawing.Point(417, 216);
             this.btnSubtract.Name = "btnSubtract";
             this.btnSubtract.Size = new System.Drawing.Size(121, 89);
             this.btnSubtract.TabIndex = 11;
@@ -199,7 +205,7 @@
             this.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn6.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn6.ForeColor = System.Drawing.Color.Lime;
-            this.btn6.Location = new System.Drawing.Point(254, 188);
+            this.btn6.Location = new System.Drawing.Point(290, 216);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(121, 89);
             this.btn6.TabIndex = 10;
@@ -215,7 +221,7 @@
             this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn5.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn5.ForeColor = System.Drawing.Color.Lime;
-            this.btn5.Location = new System.Drawing.Point(127, 188);
+            this.btn5.Location = new System.Drawing.Point(163, 216);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(121, 89);
             this.btn5.TabIndex = 9;
@@ -231,7 +237,7 @@
             this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn4.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn4.ForeColor = System.Drawing.Color.Lime;
-            this.btn4.Location = new System.Drawing.Point(0, 188);
+            this.btn4.Location = new System.Drawing.Point(36, 216);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(121, 89);
             this.btn4.TabIndex = 8;
@@ -247,7 +253,7 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.Lime;
-            this.btnAdd.Location = new System.Drawing.Point(381, 283);
+            this.btnAdd.Location = new System.Drawing.Point(417, 311);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(121, 89);
             this.btnAdd.TabIndex = 15;
@@ -263,7 +269,7 @@
             this.btn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn9.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn9.ForeColor = System.Drawing.Color.Lime;
-            this.btn9.Location = new System.Drawing.Point(254, 283);
+            this.btn9.Location = new System.Drawing.Point(290, 311);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(121, 89);
             this.btn9.TabIndex = 14;
@@ -279,7 +285,7 @@
             this.btn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn8.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn8.ForeColor = System.Drawing.Color.Lime;
-            this.btn8.Location = new System.Drawing.Point(127, 283);
+            this.btn8.Location = new System.Drawing.Point(163, 311);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(121, 89);
             this.btn8.TabIndex = 13;
@@ -295,7 +301,7 @@
             this.btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn7.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn7.ForeColor = System.Drawing.Color.Lime;
-            this.btn7.Location = new System.Drawing.Point(0, 283);
+            this.btn7.Location = new System.Drawing.Point(36, 311);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(121, 89);
             this.btn7.TabIndex = 12;
@@ -311,7 +317,7 @@
             this.btnEquals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEquals.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEquals.ForeColor = System.Drawing.Color.Lime;
-            this.btnEquals.Location = new System.Drawing.Point(381, 378);
+            this.btnEquals.Location = new System.Drawing.Point(417, 406);
             this.btnEquals.Name = "btnEquals";
             this.btnEquals.Size = new System.Drawing.Size(121, 89);
             this.btnEquals.TabIndex = 19;
@@ -327,7 +333,7 @@
             this.btnPeriod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPeriod.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPeriod.ForeColor = System.Drawing.Color.Lime;
-            this.btnPeriod.Location = new System.Drawing.Point(254, 378);
+            this.btnPeriod.Location = new System.Drawing.Point(290, 406);
             this.btnPeriod.Name = "btnPeriod";
             this.btnPeriod.Size = new System.Drawing.Size(121, 89);
             this.btnPeriod.TabIndex = 18;
@@ -343,7 +349,7 @@
             this.btn0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn0.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn0.ForeColor = System.Drawing.Color.Lime;
-            this.btn0.Location = new System.Drawing.Point(127, 378);
+            this.btn0.Location = new System.Drawing.Point(163, 406);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(121, 89);
             this.btn0.TabIndex = 17;
@@ -359,7 +365,7 @@
             this.btnPlusMinus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlusMinus.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlusMinus.ForeColor = System.Drawing.Color.Lime;
-            this.btnPlusMinus.Location = new System.Drawing.Point(0, 378);
+            this.btnPlusMinus.Location = new System.Drawing.Point(36, 406);
             this.btnPlusMinus.Name = "btnPlusMinus";
             this.btnPlusMinus.Size = new System.Drawing.Size(121, 89);
             this.btnPlusMinus.TabIndex = 16;
@@ -373,12 +379,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDisplay2.BackColor = System.Drawing.Color.Black;
             this.txtDisplay2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDisplay2.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDisplay2.Font = new System.Drawing.Font("Mongolian Baiti", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDisplay2.ForeColor = System.Drawing.Color.Lime;
             this.txtDisplay2.Location = new System.Drawing.Point(13, 12);
             this.txtDisplay2.Multiline = true;
             this.txtDisplay2.Name = "txtDisplay2";
-            this.txtDisplay2.Size = new System.Drawing.Size(625, 82);
+            this.txtDisplay2.Size = new System.Drawing.Size(698, 82);
             this.txtDisplay2.TabIndex = 20;
             this.txtDisplay2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -388,12 +394,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDisplay.BackColor = System.Drawing.Color.Black;
             this.txtDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDisplay.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDisplay.Font = new System.Drawing.Font("Mongolian Baiti", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDisplay.ForeColor = System.Drawing.Color.Lime;
-            this.txtDisplay.Location = new System.Drawing.Point(13, 100);
+            this.txtDisplay.Location = new System.Drawing.Point(12, 123);
             this.txtDisplay.Multiline = true;
             this.txtDisplay.Name = "txtDisplay";
-            this.txtDisplay.Size = new System.Drawing.Size(625, 72);
+            this.txtDisplay.Size = new System.Drawing.Size(698, 92);
             this.txtDisplay.TabIndex = 21;
             this.txtDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -402,10 +408,9 @@
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.txtDisplay2);
             this.panel1.Controls.Add(this.txtDisplay);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 36);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(650, 190);
+            this.panel1.Size = new System.Drawing.Size(723, 218);
             this.panel1.TabIndex = 22;
             // 
             // panel2
@@ -414,7 +419,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Controls.Add(this.lblMe);
             this.panel2.Controls.Add(this.lblOutput);
             this.panel2.Controls.Add(this.btnMemPos);
             this.panel2.Controls.Add(this.btnMemNeg);
@@ -439,22 +443,10 @@
             this.panel2.Controls.Add(this.btnSubtract);
             this.panel2.Controls.Add(this.btn8);
             this.panel2.Controls.Add(this.btn7);
-            this.panel2.Location = new System.Drawing.Point(0, 178);
+            this.panel2.Location = new System.Drawing.Point(0, 260);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(650, 496);
+            this.panel2.Size = new System.Drawing.Size(723, 552);
             this.panel2.TabIndex = 23;
-            // 
-            // lblMe
-            // 
-            this.lblMe.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblMe.AutoSize = true;
-            this.lblMe.Font = new System.Drawing.Font("Mongolian Baiti", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMe.ForeColor = System.Drawing.Color.Lime;
-            this.lblMe.Location = new System.Drawing.Point(522, 449);
-            this.lblMe.Name = "lblMe";
-            this.lblMe.Size = new System.Drawing.Size(116, 18);
-            this.lblMe.TabIndex = 25;
-            this.lblMe.Text = "By Ian Fraser";
             // 
             // lblOutput
             // 
@@ -463,7 +455,7 @@
             this.lblOutput.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOutput.ForeColor = System.Drawing.Color.Lime;
             this.lblOutput.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblOutput.Location = new System.Drawing.Point(508, 262);
+            this.lblOutput.Location = new System.Drawing.Point(580, 345);
             this.lblOutput.Name = "lblOutput";
             this.lblOutput.Size = new System.Drawing.Size(130, 150);
             this.lblOutput.TabIndex = 24;
@@ -477,7 +469,7 @@
             this.btnMemPos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMemPos.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMemPos.ForeColor = System.Drawing.Color.Lime;
-            this.btnMemPos.Location = new System.Drawing.Point(517, 7);
+            this.btnMemPos.Location = new System.Drawing.Point(553, 35);
             this.btnMemPos.Name = "btnMemPos";
             this.btnMemPos.Size = new System.Drawing.Size(121, 77);
             this.btnMemPos.TabIndex = 23;
@@ -493,7 +485,7 @@
             this.btnMemNeg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMemNeg.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMemNeg.ForeColor = System.Drawing.Color.Lime;
-            this.btnMemNeg.Location = new System.Drawing.Point(517, 93);
+            this.btnMemNeg.Location = new System.Drawing.Point(553, 121);
             this.btnMemNeg.Name = "btnMemNeg";
             this.btnMemNeg.Size = new System.Drawing.Size(121, 89);
             this.btnMemNeg.TabIndex = 21;
@@ -509,7 +501,7 @@
             this.btnMemClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMemClear.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMemClear.ForeColor = System.Drawing.Color.Lime;
-            this.btnMemClear.Location = new System.Drawing.Point(517, 188);
+            this.btnMemClear.Location = new System.Drawing.Point(553, 216);
             this.btnMemClear.Name = "btnMemClear";
             this.btnMemClear.Size = new System.Drawing.Size(121, 89);
             this.btnMemClear.TabIndex = 22;
@@ -525,13 +517,63 @@
             this.btnDivide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDivide.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDivide.ForeColor = System.Drawing.Color.Lime;
-            this.btnDivide.Location = new System.Drawing.Point(381, 8);
+            this.btnDivide.Location = new System.Drawing.Point(417, 36);
             this.btnDivide.Name = "btnDivide";
             this.btnDivide.Size = new System.Drawing.Size(121, 77);
             this.btnDivide.TabIndex = 20;
             this.btnDivide.Text = "/";
             this.btnDivide.UseVisualStyleBackColor = false;
             this.btnDivide.Click += new System.EventHandler(this.Operation_Click);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.infoToolStripMenuItem});
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.aboutToolStripMenuItem.Text = "About";
+            // 
+            // infoToolStripMenuItem
+            // 
+            this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
+            this.infoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.infoToolStripMenuItem.Text = "Info";
+            this.infoToolStripMenuItem.Click += new System.EventHandler(this.infoToolStripMenuItem_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.functionToolStripMenuItem,
+            this.aboutToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(723, 28);
+            this.menuStrip1.TabIndex = 24;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // functionToolStripMenuItem
+            // 
+            this.functionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.graphGeneratorToolStripMenuItem,
+            this.programmersCalculatorToolStripMenuItem});
+            this.functionToolStripMenuItem.Name = "functionToolStripMenuItem";
+            this.functionToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
+            this.functionToolStripMenuItem.Text = "Function";
+            // 
+            // graphGeneratorToolStripMenuItem
+            // 
+            this.graphGeneratorToolStripMenuItem.Name = "graphGeneratorToolStripMenuItem";
+            this.graphGeneratorToolStripMenuItem.Size = new System.Drawing.Size(252, 26);
+            this.graphGeneratorToolStripMenuItem.Text = "Graph Generator";
+            this.graphGeneratorToolStripMenuItem.Click += new System.EventHandler(this.graphGeneratorToolStripMenuItem_Click);
+            // 
+            // programmersCalculatorToolStripMenuItem
+            // 
+            this.programmersCalculatorToolStripMenuItem.Name = "programmersCalculatorToolStripMenuItem";
+            this.programmersCalculatorToolStripMenuItem.Size = new System.Drawing.Size(252, 26);
+            this.programmersCalculatorToolStripMenuItem.Text = "Programmers Calculator";
+            this.programmersCalculatorToolStripMenuItem.Click += new System.EventHandler(this.programmersCalculatorToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -540,9 +582,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.CancelButton = this.btnClear;
-            this.ClientSize = new System.Drawing.Size(650, 673);
+            this.ClientSize = new System.Drawing.Size(723, 811);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -551,8 +594,10 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -586,7 +631,12 @@
         private System.Windows.Forms.Button btnMemNeg;
         private System.Windows.Forms.Button btnMemClear;
         private System.Windows.Forms.Label lblOutput;
-        private System.Windows.Forms.Label lblMe;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem functionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem graphGeneratorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem programmersCalculatorToolStripMenuItem;
     }
 }
 
